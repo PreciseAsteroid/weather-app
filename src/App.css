@@ -1,24 +1,183 @@
+@import url(http://fonts.googleapis.com/css?family=Cabin:700);
+body{
+  background-color: #222;
+  font-family: Cabin, serif;
+  margin: 0 0 0 0;
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
   color: white;
-}
-
-.App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
+.App-header {
+  display:block;
+  background-color: rgb(83, 76, 78);
+  width: 100%;
+  }
+
+.App-logo {
+  margin-top: 1em;
+  height: 2em;
+  color: white;
+  }
+
+.App-header p {
+    padding-bottom: 0.5em;
+    margin: 0 0 0 0;
+    font-size: 2em;
+  }
+
+
+
+
+@media screen and (max-width:499px) {
+  .forecast {
+    /*display: flex;*/
+    /*margin-top: 1em;*/
+  }
+  .nav {
+    display: inline;
+  }
+
+  .results{
+      margin: auto;
+      width: 12em;
+      margin-top: 20px;
+
+  }
+
+}
+
+@media screen and (min-width:500px) {
+  .forecast {
+    display: flex;
+  }
+  .nav {
+    width: 40%;
+  }
+  .results{
+      /*margin: auto;*/
+      width: 12em;
+      margin-top: 20px;
+
+  }
+}
+
+/*.nav{
+  width: 25%;
+}*/
+.fieldset {
+  width: 100px;
+  height:65px;
+  margin: auto;
+  margin-top: 30px;
+  font-family: Cabin, serif;
+  font-size: 0.6em;
+  border: 2px solid #fff;
+  /*padding: 1.5em 0em 1em 0.5em;*/
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-radius: 0.5em;
+}
+legend {
+  color: #000;
+  background: #fff;
+  padding: 0.25em 1em;
+  border-radius: 1em;
+  margin-top: -2.5em;
+}
+
+/* HTML5 Boilerplate accessible hidden styles */
+[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px; margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* One radio button per line */
+label {
+  display: block;
+  cursor: pointer;
+  line-height: 2.5;
+  font-size: 1.5em;
+}
+
+[type="radio"] + span {
+  display: block;
+}
+
+/* the basic, unchecked style */
+[type="radio"] + span:before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.25em;
+  border-radius: 1em;
+  border: 0.125em solid #000;
+  box-shadow: 0 0 0 0.15em #fff;
+  margin-right: 2em;
+  transition: 0.5s ease all;
+}
+
+/* the checked style using the :checked pseudo class */
+[type="radio"]:checked + span:before {
+  background: green;
+  box-shadow: 0 0 0 0.25em #fff;
+  vertical-align: -0.125em;
+
+}
+
+
+
+
+.results-row {
+  padding: 5px;
+}
+
+.item{
+  margin: auto;
+  text-align: center;
+  /*border: 1px solid #CCCCCC;*/
+}
+.value{
+  font-size: 25px;
+}
+.desc{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.icon{
+  /*text-align: center;*/
+  font-size: 80px;
+  padding: 10px;
+  animation: icon-spin infinite 20s linear;
+}
+.minmax{
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+}
+
+@keyframes icon-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  color: white;
+  background-color: rgb(83, 76, 78);
+  text-align: center;
+  width: 100%;
+
 }
